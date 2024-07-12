@@ -1,0 +1,74 @@
+
+------------------------------Git Başlangıç Konumları-------------------------------------
+git init -> git reposu oluşturur.
+git status -> çalışma dizinindeki değişiklikleri gösterir.
+git add -> Dosyalaru sahneye ekler.Commit etmeye hazır olduğunu gösterir.
+git add. -> Tüm değişiklikleri kaydetmen için kullanılır.
+git commit -m "Mesaj" -> Sahneye eklenen değişiklikleri kaydeder.
+git log -> Commit geçmişini listeler.
+git branch -> Dalları listeler.
+git branch <dalismi> -> Yeni dal oluşturur.
+git merge -> Başka bir dalı mevcut dala birleştirir.
+git abort -- flag -> Birleştirme öncesine gider.
+git switch -> Branch değişiklikleri için kullanılır.
+git checkout -> Remote brancler arasinda dolanırken kullanılır. 
+
+
+------------------------------Git Stash---------------------------------------------------
+Git stash -> çalışma dizinindeki ve index aşamasındaki değişiklikleri gecici olarak depolar
+git stash pop -> en son stash'i geri yükler ve stash'i listeden siler 
+git stash apply stash@{0} -> belirli bir stash'i geri yükler fakat listeden silmez.
+git stash drop stash@{0} -> belirli bir stash'i listeden siler.
+git stash clear -> tüm listeyi temizler.
+git stash list -> listei sıralar.
+
+
+------------------------------Git Geriye Dönüş--------------------------------------------
+git chechout (id) ->Commit değiştirmek için kullanılır.
+Not:Değiklikten sonra head kafası eski gösterir istersek yeni bir daldan devam edebliriz.
+git reset (id) -> Sonraki commitleri siler.Fakat Değiştirilen içerikleri dosyadan silmez.
+git reset hard ->Değiştirilen değişiklikleri de dosya içerisinden siler.
+git revert -> Belirtilen bir commit'i geri almak için kullanılır ve bu işlemi yeni bir commit olarak kaydeder.
+git diff ->Çalışa dizinindeki değişiklikleri gösterir.
+git diff HEAD -> Çalışma dizini ve sahneleme alanındaki değişiklikleri gösterir.
+git diff <commit1> <commit2> -> İki commit arasındaki farklari gösterir.
+git diff <dosya-ismi> Belirli bir dosya içindeki değişikleri gösterir.
+git rebase -> !!!!!!
+
+
+---------------------------Github işlemleri-----------------------------------------------
+git remote add origin (URL)-> Git deposuna uzaktan yeni bir depo eklemek icin kullanılır.
+git push -u origin main -> Uzaktaki depoya localdeki dosyalari gönderir. 
+NOT: -u main dalını default olarak ayarlar.
+Origin bizim url için uzak depodaki verdiğimiz isim.
+Main ise hangi branch'e göndemek istediğimiz.
+git fetch ->Uzak depodaki değişiklikleri yerel deponuza indirir, ancak bu değişiklikleri mevcut dalınıza birleştirmez.
+Bu komut, yerel ve uzak depo arasındaki farkları incelemek için kullanılır.
+git pull -> Uzak depodaki değişiklikleri yerel deponuza indirir ve bu değişiklikleri mevcut dalınıza birleştirir.
+Bu komut, yerel dalınızı hızlıca güncellemek için kullanılır.
+git clone <URL> -> Başka repolardaki kodlari locale çekmek için kullanılır.
+NOT:Başkasının reposunu clone işlemi yaptıktan sonra kendi hesabıma push edemem erişim iznim yok.
+git fork -> Bu işlemde once kendi repomuza çekip oradan clonelayıp pushalyabiliririz.
+
+git remote -> Uzak depoları listeler.
+
+-----git pull= git fetch + git merge-----
+
+
+
+---------------------------Git Pullrequest------------------------------------------------
+Pull Request Oluşturma: Uzak depoya gönderilen dal üzerinden bir pull request oluşturulur. 
+Bu işlem, genellikle GitHub, GitLab veya Bitbucket gibi platformların web arayüzü üzerinden yapılır.
+GitHub'da, depoya gidip "Pull requests" sekmesine tıklayın ve "New pull request" butonunu seçin.
+Sonrasında, değişikliklerin yapılmasını istediğiniz dalı seçin ve "Create pull request" butonuna tıklayın.
+İnceleme ve Birleştirme: Pull request oluşturulduktan sonra proje sahipleri veya takım üyeleri tarafından incelenir.
+Değişiklikler onaylanırsa, ilgili dal ana dala (main branch) birleştirilir (merge edilir).
+GitHub'da pull request'in sayfasında "Merge pull request" butonuna tıklayarak bu işlemi gerçekleştirebilirsiniz.
+Pull request, kod incelemeleri (code review), tartışmalar ve iş birliği için önemli bir araçtır ve takım içindeki kod
+ kalitesini ve iş birliğini artırmaya yardımcı olur.
+
+
+
+
+
+
